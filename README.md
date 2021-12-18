@@ -1,5 +1,8 @@
 # Docker-Swarm-Cluster-on-Ubuntu
 
+A swarm is a group of machines that are running Docker and joined into a cluster Docker Swarm is a tool for Container Orchestration
+
+
 ## Step 1  Install Docker Machine
 
 ```
