@@ -20,3 +20,10 @@ sudo apt-get install virtualbox
 ```
  docker-machine create --driver virtualbox manager1
  ```
+
+## Step 4 :  Check machine created successfully
+
+```   
+    docker-machine ls
+    docker-machine ip manager1
+```    
