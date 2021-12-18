@@ -48,8 +48,22 @@ docker swarm init --advertise-addr MANAGER_IP
 
 ```
  docker swarm join-token worker
-``
+```
 This will give command to join swarm as worker
 SSH into worker node (machine) and run command to join swarm as worker
 
+Type ``` docker info ``` to get all the details about cluster
 
+## Step 7 :  Run containers on Docker Swarm
+
+```
+docker service create --replicas 3 -p 80:80 --name serviceName nginx
+```
+
+```
+Check the status:
+
+docker service ls
+docker service ps serviceName
+```
+### Check on the browser by giving ip for all nodes
