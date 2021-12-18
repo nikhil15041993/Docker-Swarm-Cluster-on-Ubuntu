@@ -19,6 +19,10 @@ sudo apt-get install virtualbox
 
 ```
  docker-machine create --driver virtualbox manager1
+ 
+ docker-machine create --driver virtualbox worker1
+ 
+ docker-machine create --driver virtualbox worker2
  ```
 
 ## Step 4 :  Check machine created successfully
@@ -27,3 +31,25 @@ sudo apt-get install virtualbox
     docker-machine ls
     docker-machine ip manager1
 ```    
+
+## Step 5 :  SSH (connect) to docker machine
+
+```
+docker-machine ssh manager1
+```
+
+## Step 6 :  Initialize Docker Swarm  
+
+```
+docker swarm init --advertise-addr MANAGER_IP
+```
+
+## Step 7 :  Join workers in the swarm
+
+```
+ docker swarm join-token worker
+``
+This will give command to join swarm as worker
+SSH into worker node (machine) and run command to join swarm as worker
+
+
