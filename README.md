@@ -39,6 +39,10 @@ sudo apt-get install virtualbox
 
 ```
 docker-machine ssh manager1
+
+docker-machine ssh worker1
+
+docker-machine ssh worker2
 ```
 
 ## Step 6 :  Initialize Docker Swarm  
