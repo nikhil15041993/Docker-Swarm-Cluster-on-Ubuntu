@@ -1,6 +1,6 @@
 # Docker-Swarm-Cluster-on-Ubuntu
 
-## Step 1 Install Docker Machine
+## Step 1  Install Docker Machine
 
 ```
 
@@ -67,3 +67,30 @@ docker service ls
 docker service ps serviceName
 ```
 ### Check on the browser by giving ip for all nodes
+
+
+## Step 8 :  Scale service up and down ( On Manager Node)
+
+```
+docker service scale serviceName=2
+
+docker service scale serviceName=4
+```
+
+## Step 9 :  Update service
+
+```
+docker service update --image imagename:version web
+```
+
+## Step 10 :  Remove service
+
+```
+docker service rm serviceName
+```
+
+```
+docker swarm leave : to leave the swarm
+docker-machine stop machineName : to stop the machine
+docker-machine rm machineName : to remove the machine
+```
